@@ -46,6 +46,9 @@
         </label>
     </div>
     <ion-content class="has-subheader">
+        <ion-refresher on-refresh="doRefresh()">
+
+        </ion-refresher>
         <a href="Artist.html">Artist Screen</a>
         <ion-list show-delete ="data.showDelete"
                   show-reorder="data.showReorder">
