@@ -23,28 +23,175 @@
 </head>
 <body ng-app="starter">
 <ion-pane>
-    <ion-header-bar class="bar-dark">
-        <h2 class="title">Artist List</h2>
+    <ion-header-bar class="bar-positive">
+    <button class="icon ion-navicon button button-clear"></button>
+    <h1 class="title">Ionic Blank Starter</h1>
+    <button class="icon ion-gear-a button button-clear"></button>
     </ion-header-bar>
-    <div class=" bar bar-subheader item-input-inset bar-light">
-        <label class="item-input-wrapper">
-            <i class="icon ion-search placeholder-icon"></i>
-            <input type="search" placeholder="Search">
-        </label>
+    <div class="bar bar-subheader">
+    <h2>
+    Sub Header
+    </h2>
     </div>
-    <ion-content ng-controller="ListController" class="has-subheader">
-        <ion-list>
-            <ion-item ng-repeat='item in artists'
-                      class="item-thumbnail-left
-                      item-text-wrap">
+    <ion-content class="padding has-subheader">
 
-                <!--<img src="img/{{item.shortname}}_tn.jpg"-->
-                     <!--alt="{{ item.name }} Photo">-->
-                <h2>{{item.name}}</h2>
-                <!--<h3>{{item.reknown}}</h3>-->
-                <p>{{item.bio}}</p>
-            </ion-item>
-        </ion-list>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ex lectus, iaculis nec risus vel, faucibus vehicula mauris. Nullam vitae erat sed sem tempor commodo vel quis dolor. Morbi eros justo, porta quis purus id, ultrices elementum magna. Sed fermentum ullamcorper tincidunt. Sed ultrices, tellus non tempus vehicula, augue enim iaculis enim, in vulputate libero ex quis eros. Sed vel libero pulvinar, semper nulla et, tempor turpis. Quisque at egestas enim.
+    </p>
+    Notice that this is 2 ways of making the same button
+    <p><button class="button button-positive"><i class="icon ion-ionic"> ionic</i></button></p>
+    <p><button class="button button-positive icon ion-ionic"> ionic</i></button></p>
+
+    <button class="button button-small button-positive">Small button</button>
+    <button class="button  button-outline button-assertive">Large button</button>
+    <button class="button button-energized">
+    button-energized
+    </button>
+    <div class="button-bar">
+    <button class="icon  ion-social-twitter button button-positive"> </button>
+    <button class="icon  ion-social-facebook button button-positive"> </button>
+    <button class="icon  ion-social-youtube button button-positive"> </button>
+
+    </div>
+    <div class="button-bar">
+    <button class="icon  ion-social-twitter button button-positive"> Twitter</button>
+    <button class="icon  ion-social-facebook button button-positive"> Facebook</button>
+    <button class="icon  ion-social-youtube button button-positive"> YouTube</button>
+
+    </div>
+
+
+    <div class="list">
+    <a href="#" class="item">Item 1</a>
+    <a href="#" class="item item-icon-left">
+    <i class="icon ion-email"></i>
+    Check Email
+    <span class="badge badge-assertive">3</span>
+    </a>
+    <a href="#" class="item item-icon-left">
+    <i class="icon ion-chatbubble-working"></i>
+    Item 3
+    </a>
+    <a href="#" class="item item-icon-left">
+    <i class="icon ion-mic-a"></i>
+    Item 4
+    <span class="item-note">
+    Record
+    </span>
+    </a>
+    <a href="#" class="item item-thumbnail-left">
+    <img src="http://placehold.it/100x100" alt="Avatar">
+    <h2>Item 5</h2>
+    </a>
+    <a href="#" class="item item-avatar-left">
+    <img src="http://placehold.it/100x100" alt="Avatar">
+    Item 6
+    </a>
+    <a href="#" class="item item-button-right">
+    Item 2
+    <button class="button button-assertive">
+    <i class="icon ion-person"></i>
+    </button>
+    </a>
+
+    </div>
+
+    <div class="card">
+    <div class="item">
+    Proin tempor nulla in nunc accumsan, convallis commodo ante consequat. Pellentesque eget rutrum sapien, sed pellentesque arcu. Suspendisse turpis justo, feugiat a sodales vitae, facilisis id sem. Praesent et fringilla odio. Fusce id dolor id quam pharetra dignissim et vel nisl. Nulla ac eleifend sapien.
+    </div>
+    </div>
+    <!-- Inset lists are a little faster that cards-->
+    <div class="list list-inset">
+    <div class="item item-divider">header</div>
+    <div class="item item-image item-body">
+    <img src="http://placehold.it/600x200" alt="Item img">
+    <p>
+    Proin tempor nulla in nunc accumsan, convallis commodo ante consequat. Pellentesque eget rutrum sapien, sed pellentesque arcu. Suspendisse turpis justo, feugiat a sodales vitae, facilisis id sem. Praesent et fringilla odio. Fusce id dolor id quam pharetra dignissim et vel nisl. Nulla ac eleifend sapien.
+    </div>
+    <div class="item item-icon-left item-text-wrap">
+    <i class="icon ion-home"></i>
+    Proin tempor nulla in nunc accumsan, convallis commodo ante consequat. Pellentesque eget rutrum sapien, sed pellentesque arcu. Suspendisse turpis justo, feugiat a sodales vitae, facilisis id sem. Praesent et fringilla odio. Fusce id dolor id quam pharetra dignissim et vel nisl. Nulla ac eleifend sapien.
+    </div>
+    </div>
+
+    Forms
+    <div class="list list-inset">
+    <label class="item item-input">
+    <span class="input-label">First Name</span>
+    <input type="text" placeholder="Enter your first name">
+    </label>
+    <label class="item item-input">
+    <span class="input-label">Last Name</span>
+    <input type="text" placeholder="Enter your last name">
+    </label>
+    <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+    <input type="text" placeholder="Address">
+    </label>
+    </div>
+    <label class="item item-input">
+    <textarea placeholder="Comments"></textarea>
+    </label>
+    <div class="item item-divider">I am a ..</div>
+    <div class="item item-checkbox">
+    <label class="checkbox">
+    <input type="checkbox">
+    </label>
+    <span class="input-label">Runner</span>
+    </div>
+    <div class="item item-checkbox">
+    <label class="checkbox">
+    <input type="checkbox">
+    </label>
+    <span class="input-label">Biker</span>
+    </div>
+
+    <div class="item item-divider">Favorite Social Media ..</div>
+    <label class="item item-radio">
+    <input type="radio" name="social">
+    <div class="item-content">Facebook</div>
+    <i class="radio-icon ion-social-facebook"></i>
+    </label>
+
+    <label class="item item-radio">
+    <input type="radio" name="social">
+    <div class="item-content">Twitter</div>
+    <i class="radio-icon ion-social-twitter"></i>
+    </label>
+
+    <label class="item item-radio">
+    <input type="radio" name="social">
+    <div class="item-content">Instagram</div>
+    <i class="radio-icon ion-social-instagram"></i>
+    </label>
+
+
+    </div>
+
+    <div class="item item-toggle">
+    <span class="input-label">Awesomeness</span>
+    <label class="toggle">
+    <input type="checkbox">
+    <div class="track"><div class="handle"></div> </div>
+    </label>
+    </div>
+
+    <div class="item range">
+    <i class="icon ion-sad-outline"></i>
+    <input type="range" name="feeling" min="0" max="100" value="50">
+    <i class="icon ion-happy-outline"></i>
+    </div>
+    <label class="item item-input item-select">
+    <div class="input-label">Favorite Pet</div>
+    <select>
+    <option>Dog</option>
+    <option>Cat</option>
+    <option>Chicken</option>
+    </select>
+    </label>
+
+
+
     </ion-content>
 </ion-pane>
 
