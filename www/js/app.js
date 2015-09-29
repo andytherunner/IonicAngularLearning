@@ -29,5 +29,8 @@ angular.module('starter', ['ionic'])
             $scope.onItemDelete = function(item){
                 $scope.artists.splice($scope.artists.indexOf(item),1);
             };
+            $scope.toggleStar = function(item){
+                item.star = !item.star;
+            };
         });
     }]);
