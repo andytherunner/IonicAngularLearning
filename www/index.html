@@ -24,19 +24,45 @@
   <body ng-app="starter">
 
     <ion-pane>
-      <ion-header-bar class="bar-positive">
-          <button class="icon ion-navicon button button-clear"></button>
-            <h1 class="title">Ionic Blank Starter</h1>
-          <button class="icon ion-gear-a button button-clear"></button>
-      </ion-header-bar>
-      <div class="bar bar-subheader">
-          <h2>
-              Sub Header
-          </h2>
-      </div>
+      <!--<ion-header-bar class="bar-positive">-->
+          <!--<button class="icon ion-navicon button button-clear"></button>-->
+            <!--<h1 class="title">Ionic Blank Starter</h1>-->
+          <!--<button class="icon ion-gear-a button button-clear"></button>-->
+      <!--</ion-header-bar>-->
+      <!--<div class="bar bar-subheader">-->
+          <!--<h2>-->
+              <!--Sub Header-->
+          <!--</h2>-->
+      <!--</div>-->
 
-      <ion-content class="padding has-subheader">
-          <a href="Artist.html">Artist Screen</a>
+
+          <ion-header-bar class="bar-dark">
+              <h2 class="title">Artist List</h2>
+          </ion-header-bar>
+          <div class=" bar bar-subheader item-input-inset bar-light">
+              <label class="item-input-wrapper">
+                  <i class="icon ion-search placeholder-icon"></i>
+                  <input type="search" ng-model="query"    placeholder="Search">
+              </label>
+          </div>
+          <ion-content ng-controller="ListController" class="has-subheader">
+              <ion-list>
+                  <ion-item ng-repeat='item in artists | filter: query'
+                            class="item-thumbnail-left
+                      item-text-wrap">
+
+                      <img src="img/{{item.shortname}}_tn.jpg"
+                      alt="{{ item.name }} Photo">
+                      <h2>{{item.name}}</h2>
+                      <h3>{{item.reknown}}</h3>
+                      <p>{{item.bio | limitTo: 100}}{{item.bio.length > 100 ? '&hellip;' : ''}}</p>
+                  </ion-item>
+              </ion-list>
+          </ion-content>
+
+
+      <!--<ion-content class="padding has-subheader">-->
+          <!--<a href="Artist.html">Artist Screen</a>-->
           <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ex lectus, iaculis nec risus vel, faucibus vehicula mauris. Nullam vitae erat sed sem tempor commodo vel quis dolor. Morbi eros justo, porta quis purus id, ultrices elementum magna. Sed fermentum ullamcorper tincidunt. Sed ultrices, tellus non tempus vehicula, augue enim iaculis enim, in vulputate libero ex quis eros. Sed vel libero pulvinar, semper nulla et, tempor turpis. Quisque at egestas enim.-->
         <!--</p>-->
           <!--Notice that this is 2 ways of making the same button-->
@@ -170,29 +196,31 @@
 
           <!--</div>-->
 
-          <div class="item item-toggle">
-              <span class="input-label">Awesomeness</span>
-              <label class="toggle">
-                  <input type="checkbox">
-                  <div class="track"><div class="handle"></div> </div>
-              </label>
-          </div>
+          <!--<div class="item item-toggle">-->
+              <!--<span class="input-label">Awesomeness</span>-->
+              <!--<label class="toggle">-->
+                  <!--<input type="checkbox">-->
+                  <!--<div class="track"><div class="handle"></div> </div>-->
+              <!--</label>-->
+          <!--</div>-->
 
-          <div class="item range">
-              <i class="icon ion-sad-outline"></i>
-              <input type="range" name="feeling" min="0" max="100" value="50">
-              <i class="icon ion-happy-outline"></i>
-          </div>
-          <label class="item item-input item-select">
-              <div class="input-label">Favorite Pet</div>
-              <select>
-                  <option>Dog</option>
-                  <option>Cat</option>
-                  <option>Chicken</option>
-              </select>
-          </label>
+          <!--<div class="item range">-->
+              <!--<i class="icon ion-sad-outline"></i>-->
+              <!--<input type="range" name="feeling" min="0" max="100" value="50">-->
+              <!--<i class="icon ion-happy-outline"></i>-->
+          <!--</div>-->
+          <!--<label class="item item-input item-select">-->
+              <!--<div class="input-label">Favorite Pet</div>-->
+              <!--<select>-->
+                  <!--<option>Dog</option>-->
+                  <!--<option>Cat</option>-->
+                  <!--<option>Chicken</option>-->
+              <!--</select>-->
+          <!--</label>-->
 
-      </ion-content>
+
+
+      <!--</ion-content>-->
 
 
 

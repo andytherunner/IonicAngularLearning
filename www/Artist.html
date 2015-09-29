@@ -32,6 +32,20 @@
             <input type="search" placeholder="Search">
         </label>
     </div>
+    <ion-content ng-controller="ListController" class="has-subheader">
+        <ion-list>
+            <ion-item ng-repeat='item in artists'
+                      class="item-thumbnail-left
+                      item-text-wrap">
+
+                <!--<img src="img/{{item.shortname}}_tn.jpg"-->
+                     <!--alt="{{ item.name }} Photo">-->
+                <h2>{{item.name}}</h2>
+                <!--<h3>{{item.reknown}}</h3>-->
+                <p>{{item.bio}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
 </ion-pane>
 
 </body>
